@@ -23,4 +23,13 @@ Things you may want to cover:
 
 * ...
 
-Blah blah blah
+Opening credentials on PowerShell since EDITOR is not recognized
+$env:EDITOR="code --wait"
+rails credentials:edit
+Rails.application.credentials.aws[:access_key_id]
+Rails.application.credentials.config[:aws][:access_key_id]
+
+or
+rails credentials:edit --environment development
+
+Rails.application.credentials[:aws][:access_key_id]
